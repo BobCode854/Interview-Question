@@ -1,9 +1,7 @@
 package com.java.Map;
 
 /**
- * 
- * YouTube Link : 
- *    https://www.youtube.com/watch?v=AVSGJHrrLpE&list=PL3NrzZBjk6m9do1opOKwx_C7d2HRJzpwG&index=3
+
  *      
  *           
  *           HashMap Internal Working
