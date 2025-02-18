@@ -5,25 +5,16 @@ import java.util.stream.IntStream;
 
 public class Prime
 {
-      public static boolean isPrime_Java7(int number) {
-    	  int checksum=2;
-    	  for(int i=2;i<number;i++) {
-    		  if(number==2) {
-    			  return true;
-    		  }
-    		  else if(number%i==0) {
-    			 return false;
-    		  }
-    		  else {
-    		  checksum++;
-    		  }
-    	  }
-    	  
-    	if(checksum == number) {
-    		return true;
-    	}
-    	return false;
-      }
+     public static boolean isPrime_Java7(int n) {
+        if (n <= 1)
+            return false;
+        
+        for (int i = 2; i < n; i++)
+            if (n % i == 0)
+                return false;
+
+        return true;
+   }
       public static boolean isPrime_Java8(int number) {
     	  return IntStream.range(2, number).noneMatch(i->number%i==0);
       }
