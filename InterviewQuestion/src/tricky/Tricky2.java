@@ -24,7 +24,7 @@ public class Tricky2 {
 	 map.put(t1,"hi");
 	 map.put(t2,"hello");
 	 
-	 System.out.println( map.get(t1));
+	 System.out.println( map.get(t1)); 
 	 System.out.println( map.get(t2));
 
 

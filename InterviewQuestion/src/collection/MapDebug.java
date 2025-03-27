@@ -1,4 +1,6 @@
-package com.java.Map;
+package collection;
+
+
 
 /**
 

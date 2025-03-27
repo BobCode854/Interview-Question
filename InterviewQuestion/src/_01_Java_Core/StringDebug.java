@@ -1,5 +1,4 @@
-package com.java.String;
-
+package _01_Java_Core;
 
 /**
  *                                      String
