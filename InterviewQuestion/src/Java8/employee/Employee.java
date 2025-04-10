@@ -8,6 +8,15 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+          Comparator.comparing  ===> Used when sorting by any reference type, such as String, Double, or Integer.
+				     Converts the property to an object before comparing.
+
+        Comparator.comparingInt ===> Used when sorting by a primitive int property to avoid unnecessary boxing/unboxing.
+				     More efficient than comparing() when dealing with int, long, or double
+				     
+         
+*/
 enum Gender
 {
 	Male,
