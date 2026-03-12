@@ -531,3 +531,301 @@ which react bundler is used for bundling
 Alternate to git
 api gateway type
 proxy server - 
+
+
+
+
+System Design
+==============================
+One machine and High RAM size + High memory  = Vertical scaling
+multiple machine = Horizontal scaling
+
+Horizontal scaling is Resilient : Means If one machine fails request is redirected to other machine and handles the request
+Vertical Scaling :  It is having single point of failure , If one machine fails there is nothing such with which we can handle request.
+
+Vertical scaling do InterProcess communication , because there is no other machine , hence it is fast.
+Horizontal scaling , it is a network call and is slow compared to Vertical.
+
+Data inconsistency is one of the real measure in Horizontal scaling while In vertical scaling it is having single memory so it is consistent.
+
+In Horizontal scaling , it scales well when user increases , but not the same applied on Vertical scaling.
+
+
+** Consistent Hashing
+
+
+-- Monolithic can also be scale up horizontally and can have connected to multiple db.
+-- If a team is small or cohesive go with monolith architecture with horizontal scaling the application.
+-- Monolith is faster than microservice because network calls are not associated.
+-- Single point of failure : If any server will fails , its very high chances its instances will be collapsed.
+-- Stack overflow is developed on monolith architecture.
+
+
+SQL
+==================
+1) Find name , prevoius year max sal , current year max sal from employee table
+2) Find department wise top 3 highest salary 
+	
+DS
+==========
+longest common prefix
+Roman to Integer
+Java
+======
+Sort hashmap by value
+
+Others
+=========
+Grant type in Oauth2
+What is webpack
+Redux flow in sending data - login page , to click the navigation link to send data to other component steps
+Bean life cycle
+TDD
+CICD with git
+spring boot application deployed on lambda
+How to implement security with oauth2 
+eviction in cache
+LRU
+Create complete react to backend app
+github workflow
+How can we create composite key in spring boot JPA
+If primary cache is Hibernate why secondary cache
+security on producing consuming data
+deadlock in rehashing
+How do we scale the consumer 
+consumer offset
+How to we scale the producer
+promise.all
+List<String> stringList = ["Volvo 10","Honda 5","10 Volkswagon"]
+
+     Map<String,Integer> carToCountMap = new HashMap<>();
+
+
+Spring Security
+============
+--> In Spring boot app , when we create the controller by default behind the scene Servlet will be created for the controller
+--> And We have a dispatcher servlet which takes the endpoint request from client or UI and redirect it to correct Controller class.
+--> But in Spring security instead of dispatcher servlet , we will have SecurityFilter  which intercept and then redirect .
+--> These security filters do validation to the request . 
+--> whether this is a valid request , or coming to valid client .
+--> Some filters are like , provide login page , If it is rest related app then check http basics or If the data provided as part of page then match username pass.
+--> The best part is we need not to define these things , spring automatically provide these things .
+
+
+Java
+=======
+1) Lambda related question
+2) flatmap operation - done
+3) parallel stream - done
+4) stream().stream() - done
+5) ReentrantLock - done
+6) What is deadlock situation how to handle it. - done
+7) How to handle concurrency in java - done
+8) Performance Tuning technique - done
+9) Performance major tools - done
+10) If the memory is full , how to handle this situation - done
+11) Java is pass by value or reference explain
+12) Composition vs Aggregation vs Association? - done
+13) Can private method or static methods be overridden in Java? - done
+14) Can Abstract class have main method? - done
+15) What is Serialisation and Deserialisation? - done
+16) Use of transient keyword - done
+17) Is it possible to serialise a class if its super class is not serialisable ?Can the class be still serialised and deserialised? - done
+18) Explain the difference between deep copy and shallow copy in Java, and provide examples of scenarios where each would be appropriate. - done
+19)When Finally block doesn’t get executed?  - done
+20)  Can subclass throw higher checked exception than base class?  - done
+21) Why enum - done
+22) How does Garbage collection in Java works? - done
+23) ArrayList vs vector - done
+24) ArrayList vs linkedList - done
+25) Fail Safe vs Fail Fast Iterators - done
+26) Internal working of HashMap ? try some coding with Employee object. - done
+27) Is it Mandatory to have key immutable in HashMap? - done
+28) What is blocking Queue?
+29) create thread with both extend and implements  - done
+30) yield() , sleep() , join()   -- done
+31) I have 2 threads running , one for odd and one for even , I want 1 even to print then odd , what to does - done
+32) wait vs sleep - done
+33) why is join() method used? - done
+34) Can we Override start() method in Thread? - done
+35) Can we Override run() method in Thread? - done
+36) What is IllegalThreadStateException
+37) Why do we use ThreadPool - done
+38) What is Race Condition - done
+39) What is Synchronisation?Types of Synchronisation? - done
+40) Object Level Locking vs Class Level Locking? - done
+41) If there is 2 synchronised methods m1 and m2 in a class, can 2 different threads t1 and t2 call different methods(m1,m2) respectively on same object of class c at same time ? - done
+42) If a class has a synchronised method and non synchronised method, can multiple threads execute non synchronised methods? - done
+43) Can 2 threads call 2 different static synchronised methods of same class? - done
+44) Does static synchronised methods block a non synchronised methods?
+45) Can Constructors be synchronised?
+46) What is Inter thread communication?Explain wait(),notify() and notifyall()? - done
+47)  Which class does wait(),notify() and notifyall() method belong - done
+48) Producer Consumer Problem in Java? - done
+49) Volatile vs Synchronised?
+50) What are Atomic variables? - done
+51)  runnable vs callable  ? when to call which - done
+52)  Future vs completable future with example code - done
+53)  Use of Done() , IsCancelled() and Cancel() method of Future Object? - done
+54)  What is ReEntrant lock? - done
+55)  What is executor service ? how it is different from normal thread creation ? How many threads at a time we can create with this ? How method calls and thread executed in executor service ? explain each and every thing with example code . - done
+56) Different types of ThreadExecutor Services? - done
+57) Explain how FixedThreadPool executor works? - done
+58) What is Functional Interface? why do we need it?
+59)  Write code for each predefined functional interface
+60)  Solid principal - done
+61) Difference between ClassNotFound vs NoClassDefError - done
+62) What is Singleton Design pattern?Explain ThreadSafe Singleton and Bill Pugh Singleton ?
+63) Java 17 new features
+64) Describe the principles of multithreading in Java and discuss how you would implement thread safety in a concurrent application. - done
+65) What are lambda expressions in Java 8, and how do they improve code readability and conciseness? Provide examples of lambda expressions in action.
+66) what is functional programming in java , how it is different from porevious java version.
+67) Discuss the pros and cons of using Java serialization for object persistence and provide alternatives for serializing Java objects.
+68) Explain the principles of design patterns in Java, including creational, structural, and behavioral patterns, and provide examples of each.
+69) Person p = new Person("Karan") && Person p1 = new Person("Karan") p.equals(p1) - done
+70) What is Garbage Collection in Java? How does it work?  - done
+
+
+Java 8 coding
+==============
+Array  - primitive data sorting , nonPrimitive Sorting , reverse  each character, reverse the array of string ,  duplicates number, duplicate string
+List - Integer sorting, long sorting , string sorting , duplicates , Object sorting
+Map - sort based on key , based on value , Object sorting(based on price , name) 
+String  - reverse the name ,
+Number : findPrime , fibonacci , pallindrome ,
+Optional.ofNullable vs Optional.of difference with code.
+To print the count of each character in a String
+ Print odd and Even list
+ Print odd , Even sum
+ Convert list to map
+ Print Employee salary in Ascending order
+ Find nth highest salary of employee
+    Flatmap related questions
+   
+   1) Flatten a List of Lists of Integers into a single List of Integers
+         List<List<Integer>> listOfLists = Arrays.asList(Arrays.asList(1, 2, 3), Arrays.asList(4, 5),Arrays.asList(6, 7, 8, 9));
+		 
+	2)  Square each number in the nested lists and flatten the result
+	3) Given a List of Strings, flatten them into a list of Characters 
+	                 Input: ["hello", "world"] Output: [h, e, l, l, o, w, o, r, l, d]
+	
+	4) Extract all distinct words from a list of sentences
+			Input: ["Hello World", "Hello Java", "Stream API"]
+			Output: ["Hello", "World", "Java", "Stream", "API"]
+	
+	5. Flatten a 2D array and double each element
+			Input: {{1,2}, {3,4}, {5,6}}
+			
+	6) Every employees lives in multiple cities , find unique Cities
+
+
+UI
+=======
+rerendering stop - done
+debouncing - done
+context vs redux - done
+prmise and observable
+rxjs
+
+GC optimisation and configuration for high latency
+MetaSpace and its use
+save from memory leakage
+memory optimisation technique
+tool to identify memory leak
+Loaders
+abstract class behavior
+SOLID principal
+Immutable class
+enum
+Design pattern
+ ===================
+     Creational :  Factory, Builder , Singelton
+	 Structural ; Adapter , Decorator , Composite
+	 Behavioral : Strategy , Observer , State , Chain of Responsibility
+	 
+
+Multithreading
+===============
+Executor Service -> ThreadPool , call of threads , 1,2,3 print frm 3 threads , even odd from 2 thread
+Future , use , problems
+Reenterant Lock
+Double Lock 
+Thread Life cycle
+forkJoin
+How many ways thread created
+
+======================================================================================================
+Java 8 and Java 17 Features
+
+  -- Basic Java 8  Four inbuilt Functional Interface , how to write italics
+  -- Custom Functional Interface
+  -- Programming based on Java 8
+       ========================
+	      -- String based programming  
+		                      --  Single Word       :     Reverse a word , Pallindrome check , character and its count
+							  -- Multiple Word    :      Reverse entire String,  Reverse each character in place , reverse each character of a word and reverse entire sentence,
+							                                             pallindrome check , character and its count , Merge 2 String
+																		 
+																		  
+		--Array based programming 
+		                       -- primitive : find duplicate , find unique , number and its count and assign to map , find even , remove null and find number > 3 .
+						
+		-- Map based Programming 
+		
+		- flatMap
+		- parallelStream
+		-Optional.of and Optional.ofNullable
+		- CompletableFuture : use , code , problem it solve
+		
+		-- Java 17 Features , Code to write
+		
+==============================================================================================================
+
+MicroServices
+==============================================================================
+How many design pattern you have worked - API Gateway , Circuit Breaker , Saga , Eureka Discovery
+
+  Explain API gateway - Which way you implemented , how to configure , why you choose that way
+  Circuit Breaker  -  Which way you implemented , how to configure , why you choose that way
+  Saga : Which way you implemented , how to configure , why you choose that way
+  Eureka discovery : Which way you implemented , how to configure , why you choose that way
+  
+  Spring boot
+  =========
+  Suppose millions of user hits your api to fetch the data how you handle this situation.
+  Suppose millions of user hits your api to save the data how you handle this situation.
+  
+
+
+  select odd user from table
+table 1 : same column have 50 records
+table 2 : same column have 25-200 records
+
+record vs pojo class
+callable vs runnable diff
+which scenarios we should not use  stream
+ need to fetch first 100 emp info
+ 
+ which load balancer you have user
+ how to create composite key using jpa
+ how to configure EC2 with app to deploy / lambda
+ 
+ Suppose payment you have done and inventory booked but due to time limit set , you have not be able to book the inventory
+     1) how to support this system / create
+	 2) How to prevent this strategies
+ Named queries vs native query
+
+ 
+userid , username , address - emp1
+========
+first 50
+userid , username , address - emp2
+======
+emp 25-200
+
+  select userid , username,address
+   UNION ALL from emp1 , emp2 
+
+composite primary key
+
+ 
