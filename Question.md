@@ -140,6 +140,7 @@ Final
 9)  how to create your own annotation.
 10) print even odd from 2 thread
 11)  what are the application standard you will handle to remove memory leak or outofmemory error in java
+12)  create 2 thread where one thread will print even and other will print odd.
         ============================================================================
 		 --) Tune Heap Size : Use -Xms (initial) and -Xmx (maximum heap size) to match expected memory requirements.
 		 
@@ -438,6 +439,31 @@ React
 	   event loop 
 	this keyword
 	   Thread dump : Thread deadlock
+
+	Hooks - useEffect , useState, useCallback , useContext , useMemo , useRef , useReducer
+custom hook
+spread operator
+api call
+promise
+redux flow
+statemanagement 
+redux vs context
+button to increase counter
+memoization
+HOC
+interceptors 
+security
+lazy loading
+loading 1 million data
+aynch call handle
+Dockerise
+Unit test
+packaging - webpack
+====
+js
+=============
+closure
+
 
 	   
 
